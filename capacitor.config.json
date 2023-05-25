@@ -1,0 +1,27 @@
+{
+  "appId": "com.cookies.test",
+  "appName": "test",
+  "bundledWebRuntime": false,
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    },
+    "CapacitorCookies": {
+      "enabled": true
+    },
+    "CapacitorHttp": {
+      "enabled": true
+    }
+
+  },
+  "android": {
+    "buildOptions": {
+      "keystorePath": "./my-release-key.keystore",
+      "keystorePassword": "testtest",
+      "keystoreAlias": "testtest",
+      "keystoreAliasPassword": "testtest",
+      "releaseType": "AAB" 
+    }
+  }
+}
