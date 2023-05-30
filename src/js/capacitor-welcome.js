@@ -10,7 +10,7 @@ window.customElements.define(
 
       const root = this.attachShadow({ mode: 'open' });
 
-      root.innerHTML = '<div><button id="getCookie">getCookie</button><button id="sendCookie">send Cookie</button></div>';
+      root.innerHTML = '<div><button id="getCookie">getCookie</button><button id="sendCookie">send Cookie</button><button id="consoleCookie">console Cookie</button></div>';
 
     }
 
@@ -34,6 +34,9 @@ window.customElements.define(
         } catch (e) {
           console.warn('Error', JSON.stringify(e));
         }
+      });
+      self.shadowRoot.querySelector('#consoleCookie').addEventListener('click', async function (e) {
+	      console.log(document.cookie);
       });
     }
   }
